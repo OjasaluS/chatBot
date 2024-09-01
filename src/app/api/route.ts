@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 
+// Initialize OpenAI with the API key
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || ''
 });
@@ -20,6 +21,7 @@ export async function POST(req: Request, res: Response) {
   const response = await openai.chat.completions.create({
     model: "gpt-4-1106-preview",
     messages: [
+      // Custom setting for the AI
       {
         role: "assistant",
         content: "Do not exceed 500 characters. Be precise but funny and friendly."

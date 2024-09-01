@@ -5,6 +5,10 @@ import Chat from './components/chat';
 import React, { useState } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
+/**
+ * Structure of the home page
+ * Implements the Chat component
+ */
 export default function Home() {
 
   return (

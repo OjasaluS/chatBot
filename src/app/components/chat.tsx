@@ -4,7 +4,11 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { InputGroup, Button, Form, Row, Col } from 'react-bootstrap';
 
-
+/**
+ * Create the structure of the chat part of the app
+ * 
+ * @returns Chat
+ */
 const Chat = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     api: '/api'
@@ -17,6 +21,7 @@ const Chat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }
 
+  // Scroll to the bottom when new messages are created
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
