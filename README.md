@@ -2,7 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, add your OpenAI API key into .env.local as OPENAI_API_KEY
+First, add your OpenAI API key into .env.local: 
+```bash
+OPENAI_API_KEY = 'your api key here'
+```
 
 Secondly, run the development server:
 
